@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/thiag/AndroidStudioProjects/genshinhelper/app/src/main/res/layout/activity_character_selection.xml" value="0.33" />
+        <entry key="..\:/Users/thiag/AndroidStudioProjects/genshinhelper/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/thiag/AndroidStudioProjects/genshinhelper/app/src/main/res/layout/content_character_selection.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/thiag/AndroidStudioProjects/genshinhelper/app/src/main/res/layout/selection_fragment.xml" value="0.358695652173913" />
         <entry key="..\:/Users/thiago.sa/AndroidStudioProjects/GenshinHelper/app/src/main/res/layout/activity_character_selection.xml" value="0.358695652173913" />
         <entry key="..\:/Users/thiago.sa/AndroidStudioProjects/GenshinHelper/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/thiago.sa/AndroidStudioProjects/GenshinHelper/app/src/main/res/layout/content_character_selection.xml" value="0.358695652173913" />
