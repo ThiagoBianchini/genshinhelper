@@ -13,10 +13,13 @@
         android:theme="@style/Theme.GenshinHelper"
         tools:targetApi="31">
         <activity
+            android:name=".Character_Selection_Activity"
+            android:exported="false" />
+        <activity
             android:name=".CharacterSelectionActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"
             android:label="@string/title_activity_character_selection"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.GenshinHelper.NoActionBar" />
         <activity
             android:name=".MainActivity"

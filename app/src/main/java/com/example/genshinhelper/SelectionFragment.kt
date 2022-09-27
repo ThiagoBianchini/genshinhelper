@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.genshinhelper.databinding.SelectionFragmentBinding
 
 /**
@@ -28,17 +29,13 @@ class SelectionFragment : Fragment() {
         _binding = SelectionFragmentBinding.inflate(inflater, container, false)
         return binding.root
 
-        binding.Characters.layoutManager = LinearLayoutManager(this)
-        binding.Characters.setHasFixedSize(true)
-        
+
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-        }
     }
 
     override fun onDestroyView() {
