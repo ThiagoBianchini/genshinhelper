@@ -67,6 +67,7 @@ class Character_Selection_Activity : AppCompatActivity() {
             "Barbara",
             "Hydro Catalyst"
         )
+        character_list.add(Barbara)
 
         val Venti = Characters(
             R.drawable.char_venti,

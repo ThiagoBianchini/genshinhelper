@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#CFB98E"
     tools:context=".Character_Selection_Activity">
 
     <androidx.recyclerview.widget.RecyclerView
