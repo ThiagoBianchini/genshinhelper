@@ -17,14 +17,15 @@ class Character_Selection_Activity : AppCompatActivity() {
         RV_chars.setHasFixedSize(true)
 
         val character_list: MutableList<Characters> = mutableListOf()
-        val char_adapter =  AdapChar(this, character_list)
-        RV_chars.adapter = char_adapter
+        val charAdapter =  AdapChar()
+        charAdapter.submitList(character_list)
+        RV_chars.adapter = charAdapter
 
         val Albedo = Characters(
             R.drawable.char_albedo,
             R.drawable.geo,
-            "Albedo",
-            "Geo Sword"
+            getString(R.string.albedo),
+            getString(R.string.geo_sword)
         )
         character_list.add(Albedo)
 

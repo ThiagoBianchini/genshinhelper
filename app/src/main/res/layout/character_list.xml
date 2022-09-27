@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#242951">
+    android:background="#242951"
+    android:id="@+id/container">
 
     <ImageView
         android:id="@+id/char_avatar"
@@ -41,7 +42,7 @@
         android:fontFamily="@font/genshin_font"
         android:shadowColor="@color/teal_200"
         android:shadowRadius="5"
-        android:text="Anemo Archer"
+        android:text="Anemo Bow"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/char_avatar"

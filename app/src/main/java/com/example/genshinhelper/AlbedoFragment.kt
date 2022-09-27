@@ -6,15 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.genshinhelper.databinding.VentiFragmentBinding
-
+import com.example.genshinhelper.databinding.AlbedoFragmentBinding
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class VentiFragment : Fragment() {
+class AlbedoFragment : Fragment() {
 
-    private var _binding: VentiFragmentBinding? = null
+    private var _binding: AlbedoFragmentBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,7 +24,7 @@ class VentiFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = VentiFragmentBinding.inflate(inflater, container, false)
+        _binding = AlbedoFragmentBinding.inflate(inflater, container, false)
         return binding.root
 
     }

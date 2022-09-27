@@ -12,16 +12,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/first_background"
+        android:contentDescription="@string/background"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="83dp"
-        android:contentDescription="@string/background" />
+        tools:layout_editor_absoluteY="0dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/genshin_font"
         android:gravity="center"
-        android:text="@string/titulo"
+        android:text="@string/tittle"
         android:textColor="#222222"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/EntryButton"

@@ -13,13 +13,13 @@
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/VentiFragment" />
+            app:destination="@id/AlbedoFragment" />
     </fragment>
     <fragment
-        android:id="@+id/VentiFragment"
-        android:name="com.example.genshinhelper.VentiFragment"
+        android:id="@+id/AlbedoFragment"
+        android:name="com.example.genshinhelper.AlbedoFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/venti_fragment">
+        tools:layout="@layout/albedo_fragment">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
