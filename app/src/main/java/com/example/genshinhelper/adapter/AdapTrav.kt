@@ -10,13 +10,14 @@ import com.example.genshinhelper.model.Travellers
 
 
 
-class AdapTrav : ListAdapter<
+class AdapTrav(val listener: TravellerListener) : ListAdapter<
         Travellers,
         AdapTrav.GenshinViewHolder
         >(AdapTravDiffCallBack()) {
 
     class GenshinViewHolder private constructor(
-        val binding: TravellersListBinding
+        val binding: TravellersListBinding,
+        val listener: TravellerListener
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: Travellers, position: Int) {
@@ -25,13 +26,14 @@ class AdapTrav : ListAdapter<
                 travElement.setImageResource(item.element)
                 travName.text = item.name
                 travDesc.text = item.desc
+                container.setOnClickListener { listener.onTravellerClick(position) }
             }
 
         }
 
         companion object {
             fun from(
-                parent: ViewGroup
+                parent: ViewGroup, listener: TravellerListener
             ): GenshinViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = TravellersListBinding.inflate(
@@ -39,13 +41,13 @@ class AdapTrav : ListAdapter<
                     parent,
                     false
                 )
-                return GenshinViewHolder(binding)
+                return GenshinViewHolder(binding, listener)
             }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GenshinViewHolder {
-        return GenshinViewHolder.from(parent)
+        return GenshinViewHolder.from(parent, listener)
     }
 
     override fun onBindViewHolder(holder: GenshinViewHolder, position: Int) {
@@ -53,7 +55,6 @@ class AdapTrav : ListAdapter<
         holder.bind(item, position)
     }
 }
-
 
 class AdapTravDiffCallBack : DiffUtil.ItemCallback<Travellers>() {
     override fun areItemsTheSame(oldItem: Travellers, newItem: Travellers): Boolean {
@@ -63,43 +64,11 @@ class AdapTravDiffCallBack : DiffUtil.ItemCallback<Travellers>() {
     override fun areContentsTheSame(oldItem: Travellers, newItem: Travellers): Boolean {
         return oldItem == newItem
     }
-
 }
 
-
-//
-//class AdapTrav(private val context: Context, private val characters: MutableList<Characters>): RecyclerView.Adapter<AdapTrav.CharactersViewHolder>() {
-//
-//    class ViewHolder private constructor()
-//    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharactersViewHolder {
-//        val CharInList = LayoutInflater.from(context).inflate(R.layout.character_list, parent, false)
-//        val holder = CharactersViewHolder(CharInList)
-//        return holder
-//    }
-//
-//    override fun onBindViewHolder(holder: CharactersViewHolder, position: Int) {
-//        holder.avatar.setImageResource(characters[position].avatar)
-//        holder.element.setImageResource(characters[position].element)
-//        holder.name.text(characters[position].name)
-//        holder.description.text(characters[position].desc)
-//
-//
-//    }
-//
-//    override fun getItemCount(): Int = characters.size
-//
-//
-//    inner class CharactersViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-//        val avatar = itemView.findViewById<ImageView>(R.id.char_avatar)
-//        val element = itemView.findViewById<ImageView>(R.id.char_element)
-//        val name = itemView.findViewById<TextView>(R.id.char_name)
-//        val description = itemView.findViewById<TextView>(R.id.char_desc)
-//
-//
-//    }
-//
-//
-//}
+interface  TravellerListener{
+    fun onTravellerClick(position: Int)
+}
 
 
 
