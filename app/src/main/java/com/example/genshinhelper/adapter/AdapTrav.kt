@@ -1,35 +1,30 @@
 package com.example.genshinhelper.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.genshinhelper.R
-import com.example.genshinhelper.databinding.CharacterListBinding
-import com.example.genshinhelper.model.Characters
+import com.example.genshinhelper.databinding.TravellersListBinding
+import com.example.genshinhelper.model.Travellers
 
 
 
-class AdapChar : ListAdapter<
-        Characters,
-        AdapChar.ViewHolder
-        >(AdapCharDiffCallBack()) {
+class AdapTrav : ListAdapter<
+        Travellers,
+        AdapTrav.GenshinViewHolder
+        >(AdapTravDiffCallBack()) {
 
-    class ViewHolder private constructor(
-        val binding: CharacterListBinding
+    class GenshinViewHolder private constructor(
+        val binding: TravellersListBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: Characters, position: Int) {
+        fun bind(item: Travellers, position: Int) {
             binding.apply {
-                charAvatar.setImageResource(item.avatar)
-                charElement.setImageResource(item.element)
-                charName.text = item.name
-                charDesc.text = item.desc
+                travAvatar.setImageResource(item.avatar)
+                travElement.setImageResource(item.element)
+                travName.text = item.name
+                travDesc.text = item.desc
             }
 
         }
@@ -37,35 +32,35 @@ class AdapChar : ListAdapter<
         companion object {
             fun from(
                 parent: ViewGroup
-            ): ViewHolder {
+            ): GenshinViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val binding = CharacterListBinding.inflate(
+                val binding = TravellersListBinding.inflate(
                     layoutInflater,
                     parent,
                     false
                 )
-                return ViewHolder(binding)
+                return GenshinViewHolder(binding)
             }
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder.from(parent)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GenshinViewHolder {
+        return GenshinViewHolder.from(parent)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: GenshinViewHolder, position: Int) {
         val item = getItem(position)
         holder.bind(item, position)
     }
 }
 
 
-class AdapCharDiffCallBack : DiffUtil.ItemCallback<Characters>() {
-    override fun areItemsTheSame(oldItem: Characters, newItem: Characters): Boolean {
+class AdapTravDiffCallBack : DiffUtil.ItemCallback<Travellers>() {
+    override fun areItemsTheSame(oldItem: Travellers, newItem: Travellers): Boolean {
         return oldItem.name == newItem.name
     }
 
-    override fun areContentsTheSame(oldItem: Characters, newItem: Characters): Boolean {
+    override fun areContentsTheSame(oldItem: Travellers, newItem: Travellers): Boolean {
         return oldItem == newItem
     }
 
@@ -73,7 +68,7 @@ class AdapCharDiffCallBack : DiffUtil.ItemCallback<Characters>() {
 
 
 //
-//class AdapChar(private val context: Context, private val characters: MutableList<Characters>): RecyclerView.Adapter<AdapChar.CharactersViewHolder>() {
+//class AdapTrav(private val context: Context, private val characters: MutableList<Characters>): RecyclerView.Adapter<AdapTrav.CharactersViewHolder>() {
 //
 //    class ViewHolder private constructor()
 //    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharactersViewHolder {

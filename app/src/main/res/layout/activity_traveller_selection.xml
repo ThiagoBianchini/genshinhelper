@@ -6,10 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CFB98E"
-    tools:context=".Character_Selection_Activity">
+    tools:context=".Traveller_Selection_Activity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RVChars"
+        android:id="@+id/RVTravellers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"

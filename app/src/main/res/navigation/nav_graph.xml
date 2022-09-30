@@ -2,27 +2,16 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/SelectionFragment">
+    android:id="@+id/nav_graph">
 
-    <fragment
-        android:id="@+id/SelectionFragment"
-        android:name="com.example.genshinhelper.SelectionFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/selection_fragment">
-
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/AlbedoFragment" />
-    </fragment>
     <fragment
         android:id="@+id/AlbedoFragment"
         android:name="com.example.genshinhelper.AlbedoFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/albedo_fragment">
-
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/SelectionFragment" />
-    </fragment>
+        tools:layout="@layout/albedo_fragment"/>
+    <activity
+        android:id="@+id/traveller_Selection_Activity"
+        android:name="com.example.genshinhelper.Traveller_Selection_Activity"
+        android:label="activity_character_selection"
+        tools:layout="@layout/activity_traveller_selection" />
 </navigation>

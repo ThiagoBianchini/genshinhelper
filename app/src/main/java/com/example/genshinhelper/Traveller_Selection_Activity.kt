@@ -4,24 +4,24 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.genshinhelper.adapter.AdapChar
-import com.example.genshinhelper.model.Characters
+import com.example.genshinhelper.adapter.AdapTrav
+import com.example.genshinhelper.model.Travellers
 
-class Character_Selection_Activity : AppCompatActivity() {
+class Traveller_Selection_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_character_selection)
+        setContentView(R.layout.activity_traveller_selection)
 
-        val RV_chars = findViewById<RecyclerView>(R.id.RVChars)
+        val RV_chars = findViewById<RecyclerView>(R.id.RVTravellers)
         RV_chars.layoutManager = LinearLayoutManager(this)
         RV_chars.setHasFixedSize(true)
 
-        val character_list: MutableList<Characters> = mutableListOf()
-        val charAdapter =  AdapChar()
+        val character_list: MutableList<Travellers> = mutableListOf()
+        val charAdapter =  AdapTrav()
         charAdapter.submitList(character_list)
         RV_chars.adapter = charAdapter
 
-        val Albedo = Characters(
+        val Albedo = Travellers(
             R.drawable.char_albedo,
             R.drawable.geo,
             getString(R.string.albedo),
@@ -29,7 +29,7 @@ class Character_Selection_Activity : AppCompatActivity() {
         )
         character_list.add(Albedo)
 
-        val Aloy = Characters(
+        val Aloy = Travellers(
             R.drawable.char_aloy,
             R.drawable.cryo,
             "Aloy",
@@ -37,7 +37,7 @@ class Character_Selection_Activity : AppCompatActivity() {
         )
         character_list.add(Aloy)
 
-        val Amber = Characters(
+        val Amber = Travellers(
             R.drawable.char_amber,
             R.drawable.pyro,
             "Amber",
@@ -45,7 +45,7 @@ class Character_Selection_Activity : AppCompatActivity() {
         )
         character_list.add(Amber)
 
-        val Ayaka = Characters(
+        val Ayaka = Travellers(
             R.drawable.char_ayaka,
             R.drawable.cryo,
             "Ayaka",
@@ -53,7 +53,7 @@ class Character_Selection_Activity : AppCompatActivity() {
         )
         character_list.add(Ayaka)
 
-        val Ayato = Characters(
+        val Ayato = Travellers(
             R.drawable.char_ayato,
             R.drawable.hydro,
             "Ayato",
@@ -61,7 +61,7 @@ class Character_Selection_Activity : AppCompatActivity() {
         )
         character_list.add(Ayato)
 
-        val Barbara = Characters(
+        val Barbara = Travellers(
             R.drawable.char_barbara,
             R.drawable.hydro,
             "Barbara",
@@ -69,14 +69,13 @@ class Character_Selection_Activity : AppCompatActivity() {
         )
         character_list.add(Barbara)
 
-        val Venti = Characters(
+        val Venti = Travellers(
             R.drawable.char_venti,
             R.drawable.anemo,
             "Venti",
             "Anemo Bow"
         )
         character_list.add(Venti)
-
 
     }
 }

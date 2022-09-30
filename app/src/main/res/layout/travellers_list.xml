@@ -11,7 +11,7 @@
     android:id="@+id/container">
 
     <ImageView
-        android:id="@+id/char_avatar"
+        android:id="@+id/trav_avatar"
         android:layout_width="123dp"
         android:layout_height="117dp"
         android:layout_margin="8dp"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/char_name"
+        android:id="@+id/trav_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -33,11 +33,11 @@
         android:text="Venti"
         android:textColor="@color/white"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/char_avatar"
+        app:layout_constraintStart_toEndOf="@+id/trav_avatar"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/char_desc"
+        android:id="@+id/trav_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -48,11 +48,11 @@
         android:text="Anemo Bow"
         android:textColor="@color/white"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/char_avatar"
+        app:layout_constraintStart_toEndOf="@+id/trav_avatar"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/char_element"
+        android:id="@+id/trav_element"
         android:layout_width="95dp"
         android:layout_height="88dp"
         android:layout_marginTop="27dp"

@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.EntryButton.setOnClickListener {
-            val entry_intent = Intent(this, Character_Selection_Activity::class.java)
+            val entry_intent = Intent(this, Traveller_Selection_Activity::class.java)
             startActivity(entry_intent)
         }
     }
