@@ -8,11 +8,11 @@ import com.example.genshinhelper.adapter.AdapTrav
 import com.example.genshinhelper.adapter.TravellerListener
 import com.example.genshinhelper.model.Travellers
 
-class Traveller_Selection_Activity : AppCompatActivity() {
+class TravellerSelectionActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_traveller_selection)
-
     }
+
 }

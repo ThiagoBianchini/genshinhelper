@@ -13,14 +13,8 @@
         android:theme="@style/Theme.GenshinHelper"
         tools:targetApi="31">
         <activity
-            android:name=".Traveller_Selection_Activity"
+            android:name=".TravellerSelectionActivity"
             android:exported="false" />
-        <activity
-            android:name=".CharacterSelectionActivity"
-            android:exported="false"
-            android:label="@string/title_activity_character_selection"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.GenshinHelper.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
