@@ -13,6 +13,8 @@
         <entry key="..\:/Users/thiag/AndroidStudioProjects/genshinhelper/app/src/main/res/layout/content_traveller_selection.xml" value="0.358695652173913" />
         <entry key="..\:/Users/thiag/AndroidStudioProjects/genshinhelper/app/src/main/res/layout/selection_fragment.xml" value="0.358695652173913" />
         <entry key="..\:/Users/thiag/AndroidStudioProjects/genshinhelper/app/src/main/res/layout/venti_fragment.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/thiago.sa/AndroidStudioProjects/GenshinHelper/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.312" />
+        <entry key="..\:/Users/thiago.sa/AndroidStudioProjects/GenshinHelper/app/src/main/res/drawable/ic_launcher_background.xml" value="0.312" />
         <entry key="..\:/Users/thiago.sa/AndroidStudioProjects/GenshinHelper/app/src/main/res/layout/activity_character_selection.xml" value="0.358695652173913" />
         <entry key="..\:/Users/thiago.sa/AndroidStudioProjects/GenshinHelper/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/thiago.sa/AndroidStudioProjects/GenshinHelper/app/src/main/res/layout/activity_traveller_selection.xml" value="0.17831813576494426" />
@@ -21,6 +23,7 @@
         <entry key="..\:/Users/thiago.sa/AndroidStudioProjects/GenshinHelper/app/src/main/res/layout/fragment_first.xml" value="0.358695652173913" />
         <entry key="..\:/Users/thiago.sa/AndroidStudioProjects/GenshinHelper/app/src/main/res/layout/fragment_second.xml" value="0.358695652173913" />
         <entry key="..\:/Users/thiago.sa/AndroidStudioProjects/GenshinHelper/app/src/main/res/layout/fragment_selection.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/thiago.sa/AndroidStudioProjects/GenshinHelper/app/src/main/res/layout/travellers_list.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
